@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+/*header*/
+.yhd {width: 100%; height: 90px;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    justify-content: center; 
+    background-color: rgba(226, 221, 221, 0.3);
+    z-index: 9999;
+}
+.ylogo {width: 250px;
+}
+.ylogo img { width: 90px; height: 90px;
+    margin-left: 150px;
+}
+.ybox {flex-grow: 1;}
+.ymenu {width: 1300px;
+        display: flex;
+        margin-top: 32px;
+        text-align: center;
+}
+.item1>p {width: 180px;}
+.ymenu>li {float: left;
+        margin-left: 60px;
+        font-size: 30px;
+        color: #333;
+        text-shadow: 0px 0px 2px;
+}
+.sub li a {font-size: 20px; color: white;}
+        .item1 p>a {color: white;}
+.sub {height: 0px; width: 180px; overflow: hidden;}
+.sub>li {height: 50px; }
+.ymenu:hover .sub {height: 250px;
+    transition-duration: 1s;
+}
+.item1 a::after {display: block;
+        content: "";
+        border-bottom: solid 2px tomato;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;    
+    }
+    .item1 a:hover::after {transform: scaleX(1);}
+
+* {margin: 0px; padding: 0px;
+    font-family: "Jua", sans-serif;
+    font-weight: 500;
+    font-style: normal;  
+    }
+    body {width: 100%; overflow-x: hidden; height: 100vh;}
+    ul {list-style: none;}
+    a {text-decoration: none; color: black;}
+    .yspage { clear:both; width: 100%; margin-bottom: 50px;}
+    .yspage:after { content:""; display:block; width:100%; clear:both; }
+    #showlist1 {height: 100px;}
+    .listbox1 { width: 1200px; height: 500px;
+        display: flex;
+        border-radius: 25px;
+        margin: 0px auto;
+        margin-top: 5px;
+        background-color: rgba(226, 221, 221, 0.8);
+        box-shadow: 0 0 10px;
+    }
+    .pimg {margin-left: 50px;
+        margin-top: 33px;
+    }
+    .pimg img {width: 300px; height: 425px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px;
+    }
+    .scontent th {border: 1px solid #333;
+        border-radius: 20px;
+        width: 80px;
+        background-color: gray;
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .scontent td {font-weight: 600;}
+    .scontent p {font-size: 30px;}
+    .scontent h4 {border: 1px solid #333;
+        border-radius: 20px;
+        width: 60px; height: 25px;
+        text-align: center;
+        background-color: rgb(86, 223, 138);
+        font-weight: 800;
+    }
+    .scontent {margin-left: 50px;
+        margin-top: 80px;
+    }
+    .ysgo {border: none;
+    border-radius: 20px;
+    width: 130px; height: 40px;
+    margin-top: 100px;
+    margin-left: 600px;
+    background-color: rgb(9, 104, 228);
+    box-shadow: 0 0 10px;
+    }
+    .ysgo:hover {background-color: rgb(4, 77, 172);}
+    .ysgo a {
+        font-weight: 600;
+        font-size: 25px;
+        color: white;
+    }
+    /*paginate*/
+    .ypage_wrap {
+        text-align:center;
+        font-size:0;
+    }
+    .ypage_nation {
+        display:inline-block;
+    }
+    .ypage_nation .none {
+        display:none;
+    }
+    .ypage_nation a {
+        display:block;
+        margin:0 3px;
+        float:left;
+        border:1px solid #e6e6e6;
+        width:28px;
+        height:28px;
+        line-height:28px;
+        text-align:center;
+        background-color:#fff;
+        font-size:13px;
+        color:#999999;
+        text-decoration:none;
+    }
+    .ypage_nation .arrow {
+        border:1px solid #ccc;
+    }
+    .ypage_nation .pprev {
+        background:#f8f8f8 url('../imgs/page_pprev.png') no-repeat center center;
+        margin-left:0;
+    }
+    .ypage_nation .prev {
+        background:#f8f8f8 url('../imgs/page_prev.png') no-repeat center center;
+        margin-right:7px;
+    }
+    .ypage_nation .next {
+        background:#f8f8f8 url('../imgs/page_next.png') no-repeat center center;
+        margin-left:7px;
+    }
+    .ypage_nation .nnext {
+        background:#f8f8f8 url('../imgs/page_nnext.png') no-repeat center center;
+        margin-right:0;
+    }
+    .ypage_nation a.active {
+        background-color:#42454c;
+        color:#fff;
+        border:1px solid #42454c;
+    }
+    
+	/*footer*/
+	footer {width: 100%; height: 250px;
+	    background-color: #333;
+	}

@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+
+/*초기설정*/
+* { margin: 0; padding: 0; }    
+body { width: 100%;  overflow-x:hidden; min-width:1200px; }
+body, html { background-color: #fff; }
+ul { list-style: none; }
+a { text-decoration: none; }
+.wrap { min-height:250px; }
+.clr-fix { clear:both; }
+.clr-fix:after { content:""; display:block; width:100%; clear:both;}
+
+/* 네비게이션 바 */
+#hd { width: 100%; height: 120px; position:relative; }
+.hd_wrap { clear:both; width:1200px;  margin: 0 auto; }
+.hd_wrap2 { clear:both; width:100%; height: 100px; margin: 0; background-color: #E8E8E8;}
+.logo { display:block; width: 60px; height: 60px; float:left; margin-top:5px; 
+margin-bottom: 10px; position: absolute; padding-left: 90px;padding-top: 10px;}
+
+
+/* 새롭게 만든 네비게이션 바 */
+#gnb2 {clear:both;width:2200px; height:300px;margin: 0 auto;display: flex;flex-wrap: wrap;margin-left: 12%; padding-top: 30px;}
+
+#gnb2 .menu {width: 100%;display: flex; list-style: none; }
+
+#gnb2 .menu > li {text-align: center;position:relative;width: 33.33%; box-sizing: border-box; }
+
+#gnb2 a.dp1 {background-color:#6d5f5f;color:#fff;display:block;line-height: 36px;
+font-family: 'Jua';font-style: normal;font-weight: 400;font-size: 32px;
+line-height: 40px;text-align: center;color: #FFFFFF;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+#gnb2 li:hover a.dp1 {background-color:deepskyblue;}
+#gnb2 .sub {display:none;position:absolute;left: 0;top: 35px;z-index:100;width: 100%;height: 150px;}
+#gnb2:hover .menu .sub {display:block;}
+#gnb2 .sub li {line-height: 30px;}
+#gnb2 .sub li a {color:#333;font-weight: 600;}
+#gnb2 .menu li:hover .sub {background-color:#ccc;}
+#gnb2 .sub li:hover a {color:rgb(25, 0, 255);text-decoration: underline;}
+
+
+.headet{display:block; }
+/*페이지*/
+
+.Kpage1 { clear:both; width: 100%; min-height:60vh;}
+
+.Kpage { clear:both; width: 100%; min-height:60vh; padding-bottom: 100px;}
+
+.page:after { content:""; display:block; width:100%; clear:both; }
+.page_title { text-align: center; padding-top: 2em; 
+    padding-bottom: 0.5em; }
+.page_wrap { 
+    clear:both; 
+    width: 1200px; 
+    margin: 0 auto;
+
+}
+
+
+.img1 {
+  position: relative;  /*숙소 처음 페이지 사진*/
+  width: 100%; height: 320px;
+  z-index: 1; 
+  object-fit:cover; /*사진 비율 안깨지게 cover*/
+}  
+
+.pt{    /*숙소둘러보기 폰트*/
+    position: absolute;  
+    width: 1100px;
+    height: 57px; 
+    top:190px; 
+    margin-left: 50px;
+    font-family: 'Nanum Pen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+}
+
+
+.grid { 
+    clear:both; 
+    width: 1200px; 
+    height:auto; 
+  
+    align-items: center;
+}
+
+.grid li .box_Icon { /*아이콘 박스*/
+    clear:both; 
+    width: 100%; 
+    height: 360px; 
+    color:#955151; 
+    text-align: center; 
+    line-height: 50px; 
+}
+
+[class^=col] { float:left; margin-right: 15px; margin-top: 15px; }
+[class^=col].last { margin-right: 0; }
+
+
+.col_Icon {    /*아이콘 들어갈 부분 col 영역*/
+  float: left;  
+  width: 380px;
+  height: 360px; 
+  margin-top: 30px;
+  /* background-color: #333; */
+
+}
+
+.icon{  /*아이콘*/
+    
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+}
+/* #icon:hover {  아이콘에도 클릭 이벤트 줄랬는데 안예쁨.. 일단 주석
+    box-shadow: 0 14px 28px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-5px);
+  } */
+
+
+.col_list {  /* 숙소 소개 목록 영역 (안에 박스가 들어가는 개념)*/
+    float: left;
+    width: 285px; 
+    height: 360px; 
+    /* background-color: #333;  */
+}
+
+.box_K {          /* 숙소 소개 박스 (K는 이니셜)*/
+  width: 100%; 
+  height: 360px; 
+  border-radius: 8px;
+  overflow: hidden;
+  border: #a4a4a4 1px solid;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+.box_K:hover {  /* 숙소 소개 박스 클릭*/
+  box-shadow: 0 14px 28px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);  /* 그림자*/
+  transform: translateY(-5px);   /* 위쪽으로 살짝 이동*/
+}
+.box_K * {padding: 10px;}  /* 모든 목록 박스에 패딩 줌*/
+.box_K .img {
+   display: block; 
+   width: 100%; 
+   height:210px;
+   padding: 0; 
+   } /* 박스 이미지 설정*/
+.box_K .heading { font-size: 23px; } /* 박스 제목*/
+.box .texts { font-size: 14px; line-height: 18px; } /* 박스 소제목*/
+
+
+footer{margin-top:100px;}
+/* 푸터 영역 */
+#ft { width: 100%; margin-top:100px }   
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto; } 
+.ft { clear:both; width: 100%; padding-top:3px; padding-bottom: 20px; }
+#fnb { clear:both; width:100%; height:42px; line-height: 42px; 
+border-bottom:1px solid #ccc; background-color:#333; }
+#fnb:after { content:""; display:block; width: 100%; clear: both; }
+#fnb ul li { float:left; padding:0px 10px; }
+#fnb ul.fl { float:left; }
+#fnb ul.fr { float:right; }
+#fnb ul li a { color:#fff; font-size:16px; }
+#fnb ul.fl li a:after { content:"|"; padding-left: 16px; }
+#fnb ul.fr li a:before { content:"|"; padding-right: 16px; }
+#fnb ul.fl li:hover a:after { content:"|"; padding-left: 16px; color:#fff; }
+#fnb ul.fr li:hover a:before { content:"|"; padding-right: 16px; color:#fff;  }
+#fnb ul.fl li:last-child a:after { content:""; }
+#fnb ul.fr li:first-child a:before { content:""; }
+#fnb ul li:hover a { color:deepskyblue; }
+#fnb ul.fl li:hover::last-child a:after { content:""; }
+#fnb ul.fr li:hover::first-child a:before { content:""; } 
+.copy { padding:24px; line-height: 24px; } 
+
+.btn-group { clear:both; margin-top: 10px; padding-top: 10px; text-align: right; }
+.btn { display:inline-block; padding:4px 14px; color:#fff; background-color: #333; }
+.btn.primary { background-color: deepskyblue; }
+.btn.primary:hover { background-color: #333; }
+.detail_btn{
+   clear:both;
+   padding:7px;
+   width:100px;
+   float:right;
+   margin-right: 15px;
+   background-color: #cce7ff;
+   color:#404040;
+   border-radius: 8px;
+   border: #ababb1 1px solid;
+   
+}
+button.detail_btn:hover{
+	box-shadow: 0 14px 10px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);  /* 그림자*/
+	background-color: #6bacd3;
+	color:white;
+}

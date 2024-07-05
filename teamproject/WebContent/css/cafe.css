@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+
+/*초기설정*/
+* { margin: 0; padding: 0; }    
+body { width: 100%;  overflow-x:hidden; min-width:1200px; }
+body, html { background-color: #fff; }
+ul { list-style: none; }
+a { text-decoration: none; }
+.wrap { min-height:250px; }
+.clr-fix { clear:both; }
+.clr-fix:after { content:""; display:block; width:100%; clear:both;}
+
+
+.headet{display:block; }
+/*페이지*/
+
+.Kpage_res { clear:both; width: 100%; min-height:45vh;}
+
+.Kpage_list { clear:both; width: 100%; min-height:60vh; padding-bottom: 100px;}
+
+.page:after { content:""; display:block; width:100%; clear:both; }
+.page_title { text-align: center; padding-top: 2em; 
+    padding-bottom: 0.5em; }
+.page_wrap { 
+    clear:both; 
+    width: 1400px; 
+    margin: 0 auto;
+
+}
+
+
+
+
+
+.img_res {
+  position: relative;  /*맛집 처음 페이지 사진*/
+  width: 100%; height: 370px;
+  z-index: 1; 
+  object-fit:cover; /*사진 비율 안깨지게 cover*/
+}  
+
+.pt_res{    /*숙소둘러보기 폰트*/
+    position: absolute;  
+    width: 1100px;
+    height: 57px; 
+    top:180px; 
+    margin-left: 70px;
+    font-family: 'Nanum Pen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+}
+
+
+.grid_res { 
+    clear:both; 
+   
+    height:auto; 
+  
+    align-items: center;
+}
+
+
+
+[class^=col] { 
+   float:left; 
+   margin-right: 30px; 
+   margin-top: 40px; 
+   }
+[class^=col].last { margin-right: 0; }
+
+
+
+.col_list {  /* 숙소 소개 목록 영역 (안에 박스가 들어가는 개념)*/
+    float: left;
+    width: 320px; 
+    height: 360px; 
+    /* background-color: #333;  */
+}
+
+.box_K {          /* 숙소 소개 박스 (K는 이니셜)*/
+  width: 100%; 
+  height: 360px; 
+  border-radius: 8px;
+  overflow: hidden;
+  border: #ababb1 1px solid;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+
+.box_intro{
+   width: auto; 
+    height: 360px; 
+    border-radius: 40px 40px 0px 40px;
+     overflow: hidden;
+     position: relative; 
+     object-fit:cover;
+     
+}
+.img_K{
+   position: absolute; 
+   object-fit:cover;
+   width: auto; 
+     height: 360px; 
+     
+}
+.res_intro_ft{
+   position: absolute; 
+   padding-top : 50px;
+   padding-left : 30px;
+   font-size: 30px;
+   
+}
+
+
+
+
+
+.box_K * {padding: 15px 15px 0px 15px;}  /* 모든 목록 박스에 패딩 줌*/
+.box_K .img {
+   display: block; 
+   width: 100%; 
+   height:220px;
+   padding: 0; 
+   object-fit:cover;
+   } /* 박스 이미지 설정*/
+.box_K .heading { font-size: 23px; } /* 박스 제목*/
+.box .texts { padding:0px; font-size: 14px; line-height: 10px; } /* 박스 소제목*/
+
+.detail_btn{
+   clear:both;
+   padding:7px;
+   width:100px;
+   float:right;
+   margin-right: 15px;
+   background-color: #cce7ff;
+   color:#404040;
+   border-radius: 8px;
+   border: #ababb1 1px solid;
+   
+}
+
+button.detail_btn:hover{
+	box-shadow: 0 14px 10px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);  /* 그림자*/
+	background-color: #6bacd3;
+	color:white;
+}
+
+
+footer{margin-top:100px;}
+/* 푸터 영역 */
+#ft { width: 100%; margin-top:100px }   
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto; } 
+.ft { clear:both; width: 100%; padding-top:3px; padding-bottom: 20px; }
+#fnb { clear:both; width:100%; height:42px; line-height: 42px; 
+border-bottom:1px solid #ccc; background-color:#333; }
+#fnb:after { content:""; display:block; width: 100%; clear: both; }
+#fnb ul li { float:left; padding:0px 10px; }
+#fnb ul.fl { float:left; }
+#fnb ul.fr { float:right; }
+#fnb ul li a { color:#fff; font-size:16px; }
+#fnb ul.fl li a:after { content:"|"; padding-left: 16px; }
+#fnb ul.fr li a:before { content:"|"; padding-right: 16px; }
+#fnb ul.fl li:hover a:after { content:"|"; padding-left: 16px; color:#fff; }
+#fnb ul.fr li:hover a:before { content:"|"; padding-right: 16px; color:#fff;  }
+#fnb ul.fl li:last-child a:after { content:""; }
+#fnb ul.fr li:first-child a:before { content:""; }
+#fnb ul li:hover a { color:deepskyblue; }
+#fnb ul.fl li:hover::last-child a:after { content:""; }
+#fnb ul.fr li:hover::first-child a:before { content:""; } 
+.copy { padding:24px; line-height: 24px; } 
+
+.btn-group { clear:both; margin-top: 10px; padding-top: 10px; text-align: right; }
+.btn { display:inline-block; padding:4px 14px; color:#fff; background-color: #333; }
+.btn.primary { background-color: deepskyblue; }
+.btn.primary:hover { background-color: #333; }

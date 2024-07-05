@@ -1,0 +1,142 @@
+@charset "UTF-8";
+* {margin: 0px; padding: 0px;
+    font-family: "Jua", sans-serif;
+    font-weight: 500;
+    font-style: normal;  
+}
+body {width: 100%; overflow-x: hidden; height: 100vh;}
+ul {list-style: none;}
+a {text-decoration: none; color: black;}
+.ypage { clear:both; width: 100%; height: 700px;  }
+#yshow {font-size: 50px;
+    text-align: center;
+}
+
+/*header*/
+.yhd {width: 100%; height: 90px;
+    display: flex;
+    position: fixed;
+    overflow: hidden;
+    justify-content: center; 
+    background-color: rgba(226, 221, 221, 0.3);
+    z-index: 9999;
+}
+.ylogo {width: 250px;
+}
+.ylogo img { width: 90px; height: 90px;
+    margin-left: 150px;
+}
+.ybox {flex-grow: 1;}
+.ymenu {width: 1300px;
+        display: flex;
+        margin-top: 32px;
+        text-align: center;
+}
+.item1>p {width: 180px;}
+.ymenu>li {float: left;
+        margin-left: 60px;
+        font-size: 30px;
+        color: #333;
+        text-shadow: 0px 0px 2px;
+}
+.sub li a {font-size: 20px; color: white;}
+        .item1 p>a {color: white;}
+.sub {height: 0px; width: 180px; overflow: hidden;}
+.sub>li {height: 50px; }
+.ymenu:hover .sub {height: 250px;
+    transition-duration: 1s;
+}
+.item1 a::after {display: block;
+        content: "";
+        border-bottom: solid 2px tomato;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;    
+    }
+    .item1 a:hover::after {transform: scaleX(1);}
+
+#ypage0 {height: 10px;}
+/*page1*/
+#ypage1 {height: 950px;}
+.yposter {text-align: center;
+    height: 900px;
+    margin-top: 100px;
+}
+.yposter>img {border-radius: 30px;
+    width: 630px; height: 800px;
+}
+/*page2*/
+#ypage2 {height: 520px;}
+.ytext {
+    border: none;
+    width: 1200px; height: 500px;
+    font-size: 30px;
+}
+.ytextbox {text-align: center;}
+
+/*page3*/
+#ypage3 {height: 650px;}
+.yshowbox  {width: 1400px; height: 600px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+}
+.showslides img {width: 600px; height: 435px;
+    border-radius: 20px;
+}
+.showslides {position: absolute;
+    left: 0; top: 0;
+    width: 2400px;
+    height: 450px;
+    overflow: hidden;
+    transition: left 0.5s ease-in-out;
+}
+.showslides li {float: left;
+    width: 600px; height: 435px;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.showslides.animated {
+    transition: 0.5s ease-out;
+}
+.showbtn {width: 60px; height: 30px;}
+#sprev {margin-top: 525px; margin-left: 625px;}
+#sprev,#snext {border-radius: 6px;
+    background-color: #353a35;
+    color: white;
+    font-size: 20px;
+    width: 80px; height: 30px;
+    box-shadow: 0 0 10px gray;
+}
+#sprev:hover,#snext:hover {background-color: #4d574d;}
+/*page4*/
+#ypage4 {display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    height :500px
+}
+.ytext1 {width: 800px; height: 400px;
+    margin-left: 100px;
+    border: none;
+    font-size: 30px;
+}
+.troad {height: 450px;}
+
+/*page5*/
+#ypage5 {height: 100px;}
+.mok {width: 120px; height: 40px;
+    font-size: 20px;
+    border-radius: 6px;
+    background-color: #353a35;
+    font-size: 20px;
+    box-shadow: 0 0 10px gray;
+    text-align: center;
+}
+.mok:hover {background-color: #4d574d;}
+.mok a {color: white;}
+.mokrok {width: 120px; margin: 0px auto;}
+
+/*footer*/
+footer {width: 100%; height: 250px;
+    background-color: #333;
+}

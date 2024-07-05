@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+
+* { margin: 0; padding: 0; }    
+body { width: 100%;  overflow-x:hidden; min-width:1200px; }
+body, html { background-color: #fff; }
+ul { list-style: none; }
+a { text-decoration: none; }
+.wrap { min-height:250px; }
+.clr-fix { clear:both; }
+.clr-fix:after { content:""; display:block; width:100%; clear:both;}
+/*페이지*/
+
+.Kpage1 { clear:both; width: 100%; min-height:60vh;}
+
+.Kpage { clear:both; width: 100%; min-height:60vh; padding-bottom: 100px;}
+
+.page { clear:both; width: 100%; min-height:60vh;}
+.page:after { content:""; display:block; width:100%; clear:both; }
+.page_title { text-align: center; padding-top: 2em; 
+    padding-bottom: 0.5em; }
+.page_wrap { 
+    clear:both; 
+    width: 1200px; 
+    margin: 0 auto;
+    margin-right: 60px;
+}
+.page_wrap1{ 
+  clear:both; 
+  width: 1200px; 
+  margin: 0 auto;
+}
+
+#page1{
+  padding-top: 100px;
+}
+/*page3(마지막페이지)에만 밑에서 100 띄워줌 (푸터랑 너무 붙어서)*/
+#page4 {
+  padding-bottom: 100px;  
+  padding-top: 50px;
+}
+.img1 {
+  position: relative;  /*숙소 처음 페이지 사진*/
+  width: 100%; height: 250px;
+  z-index: 1; 
+  object-fit:cover; /*사진 비율 안깨지게 cover*/
+  padding-top: 88px;
+} 
+.imgb {
+  position: relative;  /*숙소 처음 페이지 사진*/
+  width: 100%;
+  z-index: 1; 
+  object-fit:cover; /*사진 비율 안깨지게 cover*/
+  padding-top: 88px;
+}   
+
+.pt{    /*숙소둘러보기 폰트*/
+    position: absolute;  
+    width: 1100px;
+    height: 57px; 
+    top:210px; 
+    margin-left: 30px;
+    font-family: 'Nanum Pen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 62px;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+   
+}
+.ta1{
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 280px;
+  z-index: 3;
+
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 58px;
+  letter-spacing: -0.03em;
+  
+  color: #000000;
+} 
+.ta2{
+  position: absolute;
+  width: 1200px;
+  padding-top: 45px;
+  margin-left: 350px;
+  overflow: hidden;
+  z-index: 3;
+
+}
+.grid { 
+    clear:both; 
+    width: 1200px; 
+    height:auto; 
+    align-items: center;
+}
+
+.grid li .box_Icon { /*아이콘 박스*/
+    clear:both; 
+    width: 100%; 
+    height: 360px; 
+    color:#955151; 
+    text-align: center; 
+    line-height: 50px; 
+}
+
+[class^=col] { float:left; margin-right: 15px; margin-top: 15px; }
+[class^=col].last { margin-right: 0; }
+
+
+.col_Icon {    /*아이콘 들어갈 부분 col 영역*/
+  float: left;  
+  width: 380px;
+  height: 360px; 
+  margin-top: 30px;
+  /* background-color: #333; */
+
+}
+
+.icon{  /*아이콘*/
+    
+    margin: auto;
+    margin-top: 100px;
+    align-items: center;
+}
+/* #icon:hover {  아이콘에도 클릭 이벤트 줄랬는데 안예쁨.. 일단 주석
+    box-shadow: 0 14px 28px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translateY(-5px);
+  } */
+
+
+.col_list {  /* 숙소 소개 목록 영역 (안에 박스가 들어가는 개념)*/
+    float: left;
+    width: 285px; 
+    height: 360px; 
+    /* background-color: #333;  */
+}
+
+.col_list .box_K .imgb:hover {
+  filter: blur(4px); /* 원하는 블러 정도를 지정합니다. */
+}
+
+.box_K {          /* 숙소 소개 박스 (K는 이니셜)*/
+  width: 100%; 
+  height: 360px; 
+  border-radius: 8px;
+  overflow: hidden;
+  border: #a4a4a4 1px solid;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+.box_K:hover {  /* 숙소 소개 박스 클릭*/
+  box-shadow: 0 14px 28px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);  /* 그림자*/
+  transform: translateY(-5px);   /* 위쪽으로 살짝 이동*/
+}
+
+.box_K .imgb {display: block; width: 100%;height:360px; padding: 0;}
+.box_K .img1 {display: block; width: 100%;height:320px; padding: 0; } /* 박스 이미지 설정*/
+.box_K .heading { font-size: 23px; } /* 박스 제목*/
+.box_K1 {          /* 숙소 소개 박스 (K는 이니셜)*/
+  width: 100%; 
+  height: 360px; 
+  border-radius: 8px;
+  overflow: hidden;
+  border: #a4a4a4 1px solid;
+  transition: all 0.3s cubic-bezier(0.42, 0.0, 0.58, 1.0);
+}
+
+/* 블러 처리떄문에 밑엠 사진 따로 나눔 */
+.box_K1:hover {  /* 숙소 소개 박스 클릭*/
+  box-shadow: 0 14px 28px rgba(158, 158, 158, 0.25), 0 10px 10px rgba(0,0,0,0.22);  /* 그림자*/
+  transform: translateY(-5px);   /* 위쪽으로 살짝 이동*/
+}
+.box_K1 * {padding: 10px;}  /* 모든 박스에 패딩 줌*/
+.box_K1 .imgb {display: block; width: 100%; padding: 0; }
+.box_K1 .img1 {display: block; width: 100%; padding: 0; } /* 박스 이미지 설정*/
+.box_K1 .heading { font-size: 23px; } /* 박스 제목*/
+.box .texts { font-size: 14px; line-height: 18px; } /* 박스 소제목*/
+
+
+
+/* 푸터 영역 */
+#ft { width: 100%; }   
+.ft_wrap { clear:both; width: 1200px; margin: 0 auto; } 
+.ft { clear:both; width: 100%; padding-top:3px; padding-bottom: 20px; 
+}
+#fnb { clear:both; width:100%; height:42px; line-height: 42px; 
+border-bottom:1px solid #ccc; background-color:#333; }
+#fnb:after { content:""; display:block; width: 100%; clear: both; }
+#fnb ul li { float:left; padding:0px 10px; }
+#fnb ul.fl { float:left; }
+#fnb ul.fr { float:right; }
+#fnb ul li a { color:#fff; font-size:16px; }
+#fnb ul.fl li a:after { content:"|"; padding-left: 16px; }
+#fnb ul.fr li a:before { content:"|"; padding-right: 16px; }
+#fnb ul.fl li:hover a:after { content:"|"; padding-left: 16px; color:#fff; }
+#fnb ul.fr li:hover a:before { content:"|"; padding-right: 16px; color:#fff;  }
+#fnb ul.fl li:last-child a:after { content:""; }
+#fnb ul.fr li:first-child a:before { content:""; }
+#fnb ul li:hover a { color:deepskyblue; }
+#fnb ul.fl li:hover::last-child a:after { content:""; }
+#fnb ul.fr li:hover::first-child a:before { content:""; } 
+.copy { padding:24px; line-height: 24px; } 
+
+.btn-group { clear:both; margin-top: 10px; padding-top: 10px; text-align: right; }
+.btn { display:inline-block; padding:4px 14px; color:#fff; background-color: #333; }
+.btn.primary { background-color: deepskyblue; }
+.btn.primary:hover { background-color: #333; }
